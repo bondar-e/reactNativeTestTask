@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['@react-native-community', 'plugin:prettier/recommended'],
   plugins: ['prettier'],
+  parser: '@typescript-eslint/parser',
   rules: {
     'prettier/prettier': 'error',
     'no-use-before-define': 'off',
