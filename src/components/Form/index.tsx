@@ -4,22 +4,36 @@ import { View } from 'react-native';
 
 import { Input } from '@shared/Input';
 import { Button } from '@shared/Button';
+import { FormValues } from './types';
+import { formResolver } from './validations';
+import { style } from './styles';
 
 const Form: React.FC = () => {
-  const { control, handleSubmit } = useForm({
+  const { control, handleSubmit } = useForm<FormValues>({
     defaultValues: {
-      input: '',
+      firstInputNumber: null,
+      secondInputNumber: null,
     },
+    resolver: formResolver,
   });
 
-  const onSubmit = (data: { input: string }) => {
+  const onSubmit = (data: FormValues) => {
     console.log(data);
   };
 
   return (
-    <View>
-      <Input name="input" label="Input" control={control} />
-      <Button title="Calculate" onPress={handleSubmit(onSubmit)} />
+    <View style={style.container}>
+      <View style={style.inputsContainer}>
+        <Input
+          name="firstInputNumber"
+          label="First input"
+          keyboardType="numeric"
+          styles={style.firstInput}
+          control={control}
+        />
+        <Input name="secondInputNumber" label="Second input" keyboardType="numeric" control={control} />
+      </View>
+      <Button title="Calculate" styles={style.submit} onPress={handleSubmit(onSubmit)} />
     </View>
   );
 };
