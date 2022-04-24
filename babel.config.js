@@ -8,6 +8,7 @@ module.exports = {
           '@components': './src/components',
           '@shared': './src/shared',
           '@theme': './src/theme',
+          '@constants': './src/constants',
         },
       },
     ],

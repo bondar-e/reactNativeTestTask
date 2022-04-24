@@ -2,7 +2,7 @@ import { colors } from '@theme/colors';
 import { fontSizes } from '@theme/fontSizes';
 import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({
+export const style = StyleSheet.create({
   container: {
     alignItems: 'center',
     paddingVertical: 10,

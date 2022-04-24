@@ -5,7 +5,7 @@ import { colors } from '@theme/colors';
 
 export const style = StyleSheet.create({
   container: {
-    width: '100%',
+    flex: 1,
   },
   label: {
     marginBottom: 10,
