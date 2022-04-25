@@ -1,9 +1,4 @@
-export type FirstInputNumber = {
+export type FormValues = {
   firstInputNumber: number | null;
-};
-
-export type SecondInputNumber = {
   secondInputNumber: number | null;
 };
-
-export type FormValues = FirstInputNumber & SecondInputNumber;
