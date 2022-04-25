@@ -9,6 +9,8 @@ module.exports = {
           '@shared': './src/shared',
           '@theme': './src/theme',
           '@constants': './src/constants',
+          '@contexts': './src/contexts',
+          '@utils': './src/utils',
         },
       },
     ],
