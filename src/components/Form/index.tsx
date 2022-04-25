@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { View } from 'react-native';
 
 import { Input } from '@shared/Input';
 import { Button } from '@shared/Button';
+import { CalculationContext } from '@contexts/CalculationContext';
+import { getRandomMathOperation } from '@utils/main';
+import { calculate } from '@utils/calculation';
 import { FormValues } from './types';
 import { formResolver } from './validations';
 import { style } from './styles';
 
 const Form: React.FC = () => {
+  const { setCalculationData, setResult } = useContext(CalculationContext);
   const { control, handleSubmit } = useForm<FormValues>({
     defaultValues: {
       firstInputNumber: null,
@@ -18,7 +22,10 @@ const Form: React.FC = () => {
   });
 
   const onSubmit = (data: FormValues) => {
-    console.log(data);
+    const operationValue = getRandomMathOperation();
+
+    setCalculationData({ ...data, operationValue });
+    calculate({ ...data, operationValue }, setResult);
   };
 
   return (
@@ -33,7 +40,7 @@ const Form: React.FC = () => {
         />
         <Input name="secondInputNumber" label="Second input" keyboardType="numeric" control={control} />
       </View>
-      <Button title="Calculate" styles={style.submit} onPress={handleSubmit(onSubmit)} />
+      <Button title="Generate operation & Calculate" onPress={handleSubmit(onSubmit)} />
     </View>
   );
 };

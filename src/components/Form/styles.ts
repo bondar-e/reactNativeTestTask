@@ -14,7 +14,4 @@ export const style = StyleSheet.create({
   firstInput: {
     marginRight: 10,
   },
-  submit: {
-    width: 150,
-  },
 });

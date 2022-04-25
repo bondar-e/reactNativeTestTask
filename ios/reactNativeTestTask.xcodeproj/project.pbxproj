@@ -12,6 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		44EAA87F2815A8F700836144 /* RCTCalculationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EAA87E2815A8F700836144 /* RCTCalculationModule.m */; };
+		44EAA8802815A8F700836144 /* RCTCalculationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EAA87E2815A8F700836144 /* RCTCalculationModule.m */; };
+		44EAA8832815BDE100836144 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EAA8822815BDE100836144 /* ExternalAccessory.framework */; };
 		7699B88040F8A987B510C191 /* libPods-reactNativeTestTask-reactNativeTestTaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-reactNativeTestTask-reactNativeTestTaskTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reactNativeTestTask/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-reactNativeTestTask-reactNativeTestTaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeTestTask-reactNativeTestTaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-reactNativeTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTestTask.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTestTask/Pods-reactNativeTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		44EAA87E2815A8F700836144 /* RCTCalculationModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTCalculationModule.m; path = reactNativeTestTask/RCTCalculationModule.m; sourceTree = "<group>"; };
+		44EAA8812815A96600836144 /* RCTCalculationModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTCalculationModule.h; path = ../RCTCalculationModule.h; sourceTree = "<group>"; };
+		44EAA8822815BDE100836144 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		5709B34CF0A7D63546082F79 /* Pods-reactNativeTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTestTask.release.xcconfig"; path = "Target Support Files/Pods-reactNativeTestTask/Pods-reactNativeTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-reactNativeTestTask-reactNativeTestTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeTestTask-reactNativeTestTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeTestTask-reactNativeTestTaskTests/Pods-reactNativeTestTask-reactNativeTestTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-reactNativeTestTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeTestTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44EAA8832815BDE100836144 /* ExternalAccessory.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-reactNativeTestTask.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +99,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				44EAA87E2815A8F700836144 /* RCTCalculationModule.m */,
+				44EAA8812815A96600836144 /* RCTCalculationModule.h */,
 			);
 			name = reactNativeTestTask;
 			sourceTree = "<group>";
@@ -99,6 +108,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44EAA8822815BDE100836144 /* ExternalAccessory.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-reactNativeTestTask.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-reactNativeTestTask-reactNativeTestTaskTests.a */,
@@ -402,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44EAA8802815A8F700836144 /* RCTCalculationModule.m in Sources */,
 				00E356F31AD99517003FC87E /* reactNativeTestTaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +423,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				44EAA87F2815A8F700836144 /* RCTCalculationModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
